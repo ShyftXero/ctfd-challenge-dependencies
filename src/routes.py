@@ -7,6 +7,7 @@ from CTFd.utils.decorators import (
     require_verified_emails,
     viewable_without_authentication
 )
+from __future__ import print_function
 from sqlalchemy import and_
 from .models import Dependencies
 from .utils import get_challenges, get_challenges_with_dependencies
