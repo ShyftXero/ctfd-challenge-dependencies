@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from flask import jsonify, request, Blueprint, session, render_template
 from CTFd.models import db, Challenges, Tags
 from CTFd.plugins.challenges import get_chal_class
@@ -7,7 +9,6 @@ from CTFd.utils.decorators import (
     require_verified_emails,
     viewable_without_authentication
 )
-from __future__ import print_function
 from sqlalchemy import and_
 from .models import Dependencies
 from .utils import get_challenges, get_challenges_with_dependencies
