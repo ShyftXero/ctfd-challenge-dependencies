@@ -1,7 +1,7 @@
 from CTFd.plugins import register_plugin_assets_directory
-from models import Dependencies
-from routes import plugin_blueprint, get_available_challenges
-from utils import satisfies_challenge_dependencies, satisfies_hint_dependencies
+from .models import Dependencies
+from .routes import plugin_blueprint, get_available_challenges
+from .utils import satisfies_challenge_dependencies, satisfies_hint_dependencies
 
 def load(app):
     def wrap_method(name, wrapper):

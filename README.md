@@ -13,6 +13,11 @@ Add dependencies to CTFd challenges. Verified working with CTFd version 1.2.0
 
 ## Developer notes
 
+original work from -> https://github.com/narhen/ctfd-challenge-dependencies
+
+I just massaged it for python3
+
+---
 I tried to make this plugin as un-intrusive as possible. Meaning it manipulates as little as possible of pre existing routes and database structure. Hopefully this will make it easier to maintain with future CTFd versions.
 
 The only API endpoint which is overwritten with a custom plugin function is `/chals` (only returns challenges which meets its dependencies).

@@ -8,8 +8,8 @@ from CTFd.utils.decorators import (
     viewable_without_authentication
 )
 from sqlalchemy import and_
-from models import Dependencies
-from utils import get_challenges, get_challenges_with_dependencies
+from .models import Dependencies
+from .utils import get_challenges, get_challenges_with_dependencies
 
 plugin_blueprint = Blueprint("dependencies", __name__, template_folder="assets")
 
@@ -40,8 +40,8 @@ def new_dependency(chal_id):
 def delete_dependency(chal_id):
     chal = Challenges.query.filter_by(id=chal_id).first_or_404()
     dep_chal_id = request.form.get("dependency_id")
-    print dep_chal_id
-    print request.form
+    print(dep_chal_id)
+    print(request.form)
     if not dep_chal_id:
         return jsonify({"error": "No dependency id defined!"}), 400
     dep_chal = Challenges.query.filter_by(id=dep_chal_id).first()

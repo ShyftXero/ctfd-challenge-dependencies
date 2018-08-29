@@ -3,7 +3,7 @@ from CTFd.models import db, Challenges, Solves, Hints
 from sqlalchemy import or_, and_
 from sqlalchemy.sql import exists
 from itertools import groupby
-from models import Dependencies
+from .models import Dependencies
 
 def get_challenges(team_id):
     solves = db.session.query(Solves.chalid).filter(Solves.teamid == team_id)
